@@ -7,11 +7,15 @@ myApp.config(['$routeProvider', function($routeProvider){
 	 	.when('/',{
 	 		templateUrl: 'views/index.html'
 	 	}).when('/login',{
-	 		templateUrl: 'views/login.html'
+	 		templateUrl: 'views/login.html',
+	 		controller: 'RegistrationController'
 	 	}).when('/register',{
-	 		templateUrl: 'views/register.html'
+	 		templateUrl: 'views/register.html',
+	 		controller: 'RegistrationController'
 	 	}).when('/meeting',{
 	 		templateUrl: 'views/meeting.html'
+	 	}).otherwise({
+			templateUrl: 'views/404.html'
 	 	})
 	 	;
 }]);

@@ -1,2 +1,25 @@
-<h1>Hi there!</h1>
-<p>Log-in to access site features.</p>
+<div class="login">
+	<form name="myform" 
+	ng-submit="login()"
+	novalidate>
+		<h1>Olá</h1>
+		<p>Registre-se para aproveitar o app ao máximo</p>
+
+		<input type="email" name="email" placeholder="email" autofocus ng-model="user.mail" ng-required="true">
+
+		<p class="error validationeerror" ng-show=" myform.email.$invalid && myform.email.$touched ">
+			Deve ser preenchid ocom um email válido.
+		</p>
+
+		<input type="password" name="password" placeholder="password" ng-model="user.password" ng-required="true">
+
+		<p class="error validationeerror" ng-show=" myform.password.$invalid && myform.password.$touched ">
+			Password é obrigatório.
+		</p>
+
+		<button type="submit" class="btn" ng-disable="myform.$invalid" >Login</button>
+
+		<p>or <a href="#/register">Register</a></p>
+
+	</form>
+</div>
